@@ -43,6 +43,8 @@ group :development, :test do
   gem 'rspec-rails'
   #capybara
   gem 'capybara'
+  #factory girl
+  gem 'factory_girl_rails'
 end
 
 group :development do
