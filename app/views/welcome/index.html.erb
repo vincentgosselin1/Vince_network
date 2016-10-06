@@ -1,10 +1,11 @@
+<% provide(:title, 'VinceNetwork') %>
 <div class="center hero-unit">
   <h1>Vince's little social network</h1>
 
   <p>Time now is : <%= Time.now %> </p>
   <p>Due date is Monday October 10th.</p>
 
-  	<%= link_to "New member", '#', class: "btn btn-large btn-primary" %>
+  	<%= link_to "Create member", '/signup', class: "btn btn-large btn-primary" %>
   	<%= link_to "List all members", '#', class: "btn btn-large btn-primary" %>
 </div>
 
