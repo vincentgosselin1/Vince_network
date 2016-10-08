@@ -67,6 +67,31 @@ describe User do
     end
   end
 
+  
+  it { should respond_to(:relationships) }
+  it { should respond_to(:friends_with_users) }
+  it { should respond_to(:a_friend?) }
+  it { should respond_to(:befriend!) }
 
+  #Reverse Relationships
+  it { should respond_to(:reverse_relationships) }
+  it { should respond_to(:friends) }
 
+describe "befriend" do
+    let(:other_user) { FactoryGirl.create(:user) }
+    before do
+      @user.save
+      @user.befriend!(other_user)
+    end
+
+    it { @user.a_friend?(other_user) }
+    its(:friends_with_users) { should include(other_user) }
+
+    describe "friends users" do
+      subject { other_user }
+      its(:friends) { should include(@user) }
+    end
+  end
+  
 end
+

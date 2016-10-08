@@ -30,7 +30,6 @@ gem 'sprockets', '2.11.0'
 #Faker, yes this is new.
 gem 'faker', '1.1.2'
 
-#for pagination
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
@@ -48,6 +47,7 @@ group :development, :test do
   gem 'byebug'
   #Rspec
   gem 'rspec-rails'
+  gem 'rspec-its'
   #capybara
   gem 'capybara'
   #factory girl
