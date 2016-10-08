@@ -1,6 +1,7 @@
 <% provide(:title, 'All users') %>
 <div class="center hero-unit">
 <h1> Users in the database </h1>
+<%= will_paginate %>
 <ul class="users">
   <% @users.each do |user| %>
     <li>
@@ -11,4 +12,5 @@
     </li>
   <% end %>
 </ul>
+<%= will_paginate %>
 </div>
