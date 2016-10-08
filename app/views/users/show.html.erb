@@ -2,3 +2,11 @@
 <div class="center hero-unit">
 <p><%= gravatar_for @user %><%= @user.name %>, <%= @user.email %></p>
 </div>
+<div align="center">
+<p> Type your friends email </p> 
+<%= text_field(:post, :title, size: 20, :value => 'contact@host.com' )%>
+
+<br>
+
+
+</div>
