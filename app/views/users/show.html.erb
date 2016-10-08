@@ -3,8 +3,11 @@
 <p><%= gravatar_for @user %><%= @user.name %>, <%= @user.email %></p>
 </div>
 <div align="center">
-<p> Type your friends email </p> 
-<%= text_field(:post, :title, size: 20, :value => 'contact@host.com' )%>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Type your friend's email:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <br>
 
