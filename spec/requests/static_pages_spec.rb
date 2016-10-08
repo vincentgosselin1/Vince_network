@@ -9,4 +9,7 @@ describe "Static pages" do
       expect(page).to have_content('Vince')
     end
   end
+
+
 end
+

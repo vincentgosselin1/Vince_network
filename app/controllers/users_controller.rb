@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @all_friends = @user.friends_users
     if params[:search]
       @user_friend = User.search(params[:search])
     end
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@users = User.paginate(page: params[:page])
+  	@users = User.paginate(page: params[:page]) 
   end
 
   def create

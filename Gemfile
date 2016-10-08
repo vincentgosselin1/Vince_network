@@ -33,6 +33,9 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
+#pagination helper
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
