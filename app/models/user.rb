@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	has_many :relationships, foreign_key: "friend_id", dependent: :destroy
-	has_many :friends_with_users, through: :relationships, source: :friends_with
+	has_many :friends_users, through: :relationships, source: :friends_with
 
 	has_many :reverse_relationships, foreign_key: "friends_with_id",
                                    class_name:  "Relationship",

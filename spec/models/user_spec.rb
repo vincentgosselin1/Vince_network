@@ -69,7 +69,7 @@ describe User do
 
   
   it { should respond_to(:relationships) }
-  it { should respond_to(:friends_with_users) }
+  it { should respond_to(:friends_users) }
   it { should respond_to(:a_friend?) }
   it { should respond_to(:befriend!) }
 
@@ -85,7 +85,7 @@ describe "befriend" do
     end
 
     it { @user.a_friend?(other_user) }
-    its(:friends_with_users) { should include(other_user) }
+    its(:friends_users) { should include(other_user) }
 
     describe "friends users" do
       subject { other_user }
