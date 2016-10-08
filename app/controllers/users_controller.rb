@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    if params[:search]
+      @user_friend = User.search(params[:search])
+    end
   end
   
   def new
