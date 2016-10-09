@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     @all_friends = @user.friends_users
     if params[:search]
-      @user_friend = User.search(params[:search])
+      @user_friend = User.find_by_email(params[:search])
     end
   end
   
@@ -27,7 +27,9 @@ class UsersController < ApplicationController
   end
 
   def friends
-    @heading = "HELLO THIS IS SCOTT"
+    #@user.befriend!(@user_friend)
+    ##Vice-Versa
+    #@user_friend.befriend!(@user)
   end
 
   private

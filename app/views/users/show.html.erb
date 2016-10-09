@@ -12,8 +12,7 @@
 </p>
 <% end %>
 <% if @user_friend.present? %>
-<p> TO FIX, why @user_friend.name doesn't return Jambon Farcie? </p>
-<%= link_to "Add #{render @user_friend} as a friend", '#', class: "btn btn-small btn-primary" %> 
+<%= link_to "Add Friend #{@user_friend.email}", "#{@user.id}_and_#{@user_friend.id}" , class: "btn btn-small btn-primary" %> 
 <% else %>
 	<p> There are no user matching <%= params[:search] %>. </p>
 <% end %>
