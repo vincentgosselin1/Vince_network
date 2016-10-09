@@ -26,6 +26,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def friends
+    @heading = "HELLO THIS IS SCOTT"
+  end
+
   private
 
   def user_params

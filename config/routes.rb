@@ -12,6 +12,7 @@ resources :users do
   # You can have the root of your site routed with "root"
 root 'welcome#index'
 match '/signup', to: 'users#new', via: 'get'
+get '/users/:id/friends', to: 'users#friends'
 
 
   # Example of regular route:
