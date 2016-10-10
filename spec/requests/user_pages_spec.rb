@@ -41,5 +41,25 @@ describe "User pages" do
       end
     end
   end
+
+  describe "seach a user" do
+    # let(:user) { FactoryGirl.create(:user) }
+    # let(:other_user) { FactoryGirl.create(:user) }
+    # before { visit "users/#{user.id}" }
+    # it { should have_content(user.name) }
+    # it { should have_title(user.name) }
+    # fill_in 'search-form', :with => other_user.email
+    # click_button "Search"
+    # expect { click_button "Add Friend #{other_user.email}" }
+    
+
+  end
+
+
+
+
+
+
+
 end
 

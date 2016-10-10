@@ -27,9 +27,16 @@ class UsersController < ApplicationController
   end
 
   def friends
-    #@user.befriend!(@user_friend)
+    #Cowboy a bit.
+    ids = params[:id].split(/_/)
+    id = ids[0]
+    friend_id = ids[1]
+    @user = User.find(id.to_i)
+    @user_friend = User.find(friend_id.to_i)
+    @user.befriend!(@user_friend)
     ##Vice-Versa
-    #@user_friend.befriend!(@user)
+    @user_friend.befriend!(@user)
+    render 'friends'
   end
 
   private

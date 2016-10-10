@@ -12,7 +12,7 @@
 </p>
 <% end %>
 <% if @user_friend.present? %>
-<%= link_to "Add Friend #{@user_friend.email}", "#{@user.id}_and_#{@user_friend.id}" , class: "btn btn-small btn-primary" %> 
+<%= button_to "Add #{@user_friend.email}", "/users/#{@user.id}_#{@user_friend.id}/friends", method: "get" %>
 <% else %>
 	<p> There are no user matching <%= params[:search] %>. </p>
 <% end %>
